@@ -1,0 +1,26 @@
+{
+  "id": "6f4f2e1d-4081-473d-af62-8d24bea3360e",
+  "name": "AL Webinar-24-10-17",
+  "publisher": "Default publisher",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "compatibilityId": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "11.0.0.0",
+  "application": {
+    "version": "11.0.0.0",
+    "locale": "US"
+  },
+  "idRange": {
+    "from": 50100,
+    "to": 50149
+  }
+}

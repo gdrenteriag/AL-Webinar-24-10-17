@@ -1,0 +1,15 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "al",
+			"request": "publish",
+			"name": "Local server",
+			"server": "https://nav2018us09.westeurope.cloudapp.azure.com",
+			"serverInstance": "NAV",
+			"tenant": "",
+			"authentication": "UserPassword",
+			"startupObjectId": 22
+		}
+	]
+}
