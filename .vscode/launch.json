@@ -3,13 +3,13 @@
 	"configurations": [
 		{
 			"type": "al",
-			"request": "publish",
+			"request": "launch",
 			"name": "Local server",
 			"server": "https://nav2018us09.westeurope.cloudapp.azure.com",
 			"serverInstance": "NAV",
 			"tenant": "",
 			"authentication": "UserPassword",
-			"startupObjectId": 22
+			"startupObjectId": 50100//22
 		}
 	]
 }
