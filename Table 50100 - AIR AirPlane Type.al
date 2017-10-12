@@ -1,4 +1,4 @@
-table 50100 "Airplane type"
+table 50100 "AIR Airplane type"
 {
 
     fields
@@ -14,7 +14,7 @@ table 50100 "Airplane type"
         }
         field (11; Popularity; Decimal)
         {
-
+            CaptionML = ENU = 'Popularity %';
         }
 
         
@@ -26,6 +26,7 @@ table 50100 "Airplane type"
         {
             Clustered = true;
         }
+        key(SK; Popularity){}
     }
     
     var
