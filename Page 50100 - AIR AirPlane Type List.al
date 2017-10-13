@@ -87,5 +87,14 @@ page 50100 "AIR Airplane Type List"
     begin
         CreateItemActionEnabled := "ICAO Code" <> '';
     end;
+
+    trigger OnOpenPage();
+    var
+        SetFilterOnPropDownPage : Codeunit "GEN SetFilter On DropDown Page";
+    begin
+       if SetFilterOnPropDownPage.HasFilter then
+            SetFilter(Description,SetFilterOnPropDownPage.GetFilter);
+    end;
+
     
 }

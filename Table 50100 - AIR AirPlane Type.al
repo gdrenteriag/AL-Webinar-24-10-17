@@ -28,9 +28,13 @@ table 50100 "AIR Airplane type"
         }
         key(SK; Popularity){}
     }
+
+    fieldgroups
+    {
+        fieldgroup(DropDown;"ICAO Code",Description,Popularity){}
+    }
     
     var
-        myInt: Integer;
         
     trigger OnInsert();
     begin

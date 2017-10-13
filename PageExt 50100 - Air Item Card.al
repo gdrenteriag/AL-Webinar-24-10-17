@@ -8,6 +8,7 @@ pageextension 50100 "AIR Item Card" extends "Item Card"
             field("AIR Airplane Type";"AIR Airplane Type")
             {
                 ApplicationArea = All;
+                LookupPageId = "AIR Airplane Type List";
             }
         }
     }
@@ -44,4 +45,29 @@ pageextension 50100 "AIR Item Card" extends "Item Card"
     }
     
     var
+    
+    
+    trigger OnOpenPage();
+    var
+        SetFilterOnDropDownPage: Codeunit "GEN SetFilter On DropDown Page";
+    begin
+        SetFilterOnDropDownPage.ClearFilter;
+    end;
+    
+    trigger OnClosePage();
+    var
+        SetFilterOnDropDownPage: Codeunit "GEN SetFilter On DropDown Page";
+    begin
+        SetFilterOnDropDownPage.ClearFilter;
+    end;
+    
+    trigger OnAfterGetCurrRecord();
+    var
+        SetFilterOnDropDownPage: Codeunit "GEN SetFilter On DropDown Page";
+        AirplaneFunctions : Codeunit "AIR Airplane Functions";
+    begin
+        if CurrPage.Editable then
+            SetFilterOnDropDownPage.SetFilter(AirplaneFunctions.CreateFilterFromItemDescription(Rec));
+    end;    
+    
 }
