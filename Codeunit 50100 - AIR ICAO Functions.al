@@ -11,7 +11,9 @@ codeunit 50100 "AIR ICAO Functions"
         AirplaneNotifications: Codeunit "AIR Notifications";        
     begin
         GetAirplaneTypesFromIATACodes();
-        AirplaneNotifications.ShowNotificationAfterAirplaneTypesWereUpdated;       
+        AirplaneNotifications.ShowNotificationAfterAirplaneTypesWereUpdated;
+
+        OnAfterAirplanesTypesWhereUpdated();       
     end;
     
     local procedure GetAirplaneTypesFromIATACodes();
@@ -87,6 +89,11 @@ codeunit 50100 "AIR ICAO Functions"
             end;
         end;
         
+    end;
+
+    [IntegrationEvent(false,false)]
+    local procedure OnAfterAirplanesTypesWhereUpdated();
+    begin
     end;
     
     

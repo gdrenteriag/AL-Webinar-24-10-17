@@ -51,9 +51,6 @@ page 50100 "AIR Airplane Type List"
                 begin
                     ICAOFunctions.GetAirplaneTypes();
                     //Message('List was updated with %1 airplanes types',Count);
-
-                    if FindFirst then;
-
                 end;
             }
             
@@ -88,6 +85,12 @@ page 50100 "AIR Airplane Type List"
         CreateItemActionEnabled := "ICAO Code" <> '';
     end;
 
+    trigger OnInit();
+    begin
+       //SetCurrentKey(Popularity);
+       //SetAscending(Popularity,false);
+    end;
+
     trigger OnOpenPage();
     var
         SetFilterOnPropDownPage : Codeunit "GEN SetFilter On DropDown Page";
@@ -99,8 +102,4 @@ page 50100 "AIR Airplane Type List"
           Notifications.ShowNotificationWhenAirplaneTypesIsEmpty();
     end;
 
-    local procedure RefreshPageAfterUpdateDataFromWebService();
-    var
-    begin
-    end;
 }

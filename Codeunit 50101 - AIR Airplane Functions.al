@@ -25,8 +25,9 @@ codeunit 50101 "AIR Airplane Functions"
     end;
     
     procedure ShowCurrentFlightsForAirplaneType(AirplaneType:Code[20]);
+    var
     begin
-        Hyperlink(STRSUBSTNO('https://flightaware.com/live/aircrafttype/%1',AirplaneType));
+        Hyperlink(STRSUBSTNO('https://flightaware.com/live/aircrafttype/%1',AirplaneType));    
     end;
     
     [EventSubscriber(ObjectType::Table,Database::Item,'OnAfterValidateEvent','Description',true,true)]
@@ -39,7 +40,7 @@ codeunit 50101 "AIR Airplane Functions"
     
     procedure CreateFilterFromItemDescription(Rec: Record Item): Text;
     var
-        CopyTo: Integer;        
+        CopyTo: Integer;
     begin
         CopyTo := STRPOS(Rec."Description",' ');
         if CopyTo <> 0 then

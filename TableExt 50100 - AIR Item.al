@@ -8,8 +8,21 @@ tableextension 50100 MyExtension extends Item
             CaptionML = ENU = 'Airplane Type';
             TableRelation = "AIR Airplane type"."ICAO Code";
             ValidateTableRelation = true;
+            trigger OnValidate();
+            begin
+                UpdateDescriptionFromAirPlaneType;
+            end;
         }
     }
     
+    local procedure UpdateDescriptionFromAirPlaneType();
     var
+        AirplaneType: Record "AIR Airplane type";
+    begin
+        if "AIR Airplane Type" = '' then
+            exit;
+            
+        AirplaneType.Get("AIR Airplane Type");
+        Description := AirplaneType.Description;
+    end;
 }

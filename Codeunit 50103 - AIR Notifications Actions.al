@@ -11,7 +11,7 @@ codeunit 50103 "AIR Notifications Actions"
     
     procedure LearnMoreAboutApp(var MyNotification : Notification);
     begin
-        PlayVideo('Add URL HERE'); //TODO
+        PlayVideo('https://www.youtube.com/embed/3MgjS3DTB_0');
     end;
     
     local procedure PlayVideo(Url: Text);
