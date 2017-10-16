@@ -50,10 +50,10 @@ page 50100 "AIR Airplane Type List"
                     ICAOFunctions: Codeunit "AIR ICAO Functions";
                 begin
                     ICAOFunctions.GetAirplaneTypes();
-                    CurrPage.Update;
-                    if FindFirst then
-                        Message('List was updated with %1 airplanes types',Count);
-                        
+                    //Message('List was updated with %1 airplanes types',Count);
+
+                    if FindFirst then;
+
                 end;
             }
             
@@ -91,10 +91,16 @@ page 50100 "AIR Airplane Type List"
     trigger OnOpenPage();
     var
         SetFilterOnPropDownPage : Codeunit "GEN SetFilter On DropDown Page";
+        Notifications: Codeunit "AIR Notifications";
     begin
        if SetFilterOnPropDownPage.HasFilter then
             SetFilter(Description,SetFilterOnPropDownPage.GetFilter);
+       If IsEmpty then
+          Notifications.ShowNotificationWhenAirplaneTypesIsEmpty();
     end;
 
-    
+    local procedure RefreshPageAfterUpdateDataFromWebService();
+    var
+    begin
+    end;
 }

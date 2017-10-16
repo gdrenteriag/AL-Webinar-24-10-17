@@ -9,7 +9,7 @@
 			"serverInstance": "NAV",
 			"tenant": "",
 			"authentication": "UserPassword",
-			"startupObjectId": 50100//22
+			"startupObjectId": 31//50100//22
 		}
 	]
 }

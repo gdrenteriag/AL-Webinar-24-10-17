@@ -8,8 +8,10 @@ codeunit 50100 "AIR ICAO Functions"
     
     procedure GetAirplaneTypes();
     var
+        AirplaneNotifications: Codeunit "AIR Notifications";        
     begin
         GetAirplaneTypesFromIATACodes();
+        AirplaneNotifications.ShowNotificationAfterAirplaneTypesWereUpdated;       
     end;
     
     local procedure GetAirplaneTypesFromIATACodes();
@@ -49,10 +51,10 @@ codeunit 50100 "AIR ICAO Functions"
     local procedure GetAPIKey(): Text;
     var
     begin
-        exit('00-00-00-000-0000-0000-00'); //change for setup
+        exit('00000000-0000-0000-0000-000000000000'); //change for setup
     end;
     */
-
+    
     local procedure SaveResultInAirplaneTypeTable(var Arguments: Record "GEN WebService Argument" temporary)
     var
         AirplaneType: Record "AIR Airplane type";
