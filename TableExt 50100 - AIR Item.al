@@ -1,4 +1,4 @@
-tableextension 50100 MyExtension extends Item
+tableextension 50100 "AIR Item" extends Item
 {
     fields
     {
