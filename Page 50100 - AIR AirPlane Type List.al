@@ -1,7 +1,7 @@
-page 50100 "Airplane Type List"
+page 50100 "AIR Airplane Type List"
 {
     PageType = List;
-    SourceTable = "Airplane type";
+    SourceTable = "AIR Airplane type";
     Editable = false;
     
     layout

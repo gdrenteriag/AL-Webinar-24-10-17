@@ -1,4 +1,4 @@
-table 50100 "Airplane type"
+table 50100 "AIR Airplane type"
 {
 
     fields
