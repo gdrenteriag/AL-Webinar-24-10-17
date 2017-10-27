@@ -6,13 +6,15 @@ codeunit 50101 "AIR Airplane Functions"
     
     procedure RunCreateNewItem(var AirplaneType : Record "AIR Airplane type");
     var
-        Item: Record Item;
-        ItemTemplate: Record "Item Template";
+        //Item: Record Item;
+        //ItemTemplate: Record "Item Template";
+        ItemCreateWizard: page "AIR Create Item Wizard";
     begin
         //if ItemTemplate.NewItemFromTemplate(Item) then begin
         //    COPY(Item);
         //end;
-        if AirplaneType."ICAO Code" = '' then
+
+        /* if AirplaneType."ICAO Code" = '' then
             exit;
             
         Item.INIT;
@@ -20,8 +22,9 @@ codeunit 50101 "AIR Airplane Functions"
         Item."AIR Airplane Type" := AirplaneType."ICAO Code";
         if not Item.Insert(true) then
             exit;
-        Page.Run(Page::"Item card",Item);
-        
+        Page.Run(Page::"Item card",Item); */
+        ItemCreateWizard.InitParameters(AirplaneType);
+        ItemCreateWizard.Run;
     end;
     
     procedure ShowCurrentFlightsForAirplaneType(AirplaneType:Code[20]);
