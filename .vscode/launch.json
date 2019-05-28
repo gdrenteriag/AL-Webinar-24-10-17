@@ -5,11 +5,12 @@
 			"type": "al",
 			"request": "launch",
 			"name": "Local server",
-			"server": "https://nav2018us10.westeurope.cloudapp.azure.com",
-			"serverInstance": "NAV",
+			"server": "http://localhost",
+			"serverInstance": "BC140",
 			"tenant": "",
-			"authentication": "UserPassword",
-			"startupObjectId": 50100//22
+			"authentication": "Windows",
+			"startupObjectId": 50100,//22,
+"port": 7999
 		}
 	]
 }
