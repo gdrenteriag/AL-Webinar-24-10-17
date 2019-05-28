@@ -5,7 +5,6 @@
   "brief": "",
   "description": "",
   "version": "1.0.0.0",
-  "compatibilityId": "1.0.0.0",
   "privacyStatement": "",
   "EULA": "",
   "help": "",
@@ -14,13 +13,10 @@
   "capabilities": [],
   "dependencies": [],
   "screenshots": [],
-  "platform": "11.0.0.0",
-  "application": {
-    "version": "11.0.0.0",
-    "locale": "US"
-  },
-  "idRange": {
+  "platform": "14.0.0.0",
+  "application": "14.0.0.0",
+  "idRanges": [{
     "from": 50100,
     "to": 50149
-  }
+  }]
 }
